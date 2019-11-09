@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="matchItemVM"
+            type="com.siifii.pl_fixture.ui.fixture.MatchItemViewModel" />
+
+        <variable
+            name="matchesItem"
+            type="com.siifii.pl_fixture.data.model.MatchesItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtHomeTeam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@{matchItemVM.homeTeam}"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtAwayTeam"
+                app:layout_constraintEnd_toStartOf="@+id/txtMatchStatus"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/cl"
+                tools:text="Everton FC" />
+
+            <TextView
+                android:id="@+id/txtAwayTeam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="@{matchItemVM.awayTeam}"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtMatchStatus"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Everton FC" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.55" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="@{matchItemVM.matchHasStarted? View.VISIBLE : View.INVISIBLE}"
+                app:constraint_referenced_ids="txtHomeScore,txtAwayScore,txtSeparation,txtMatchStatus" />
+
+            <TextView
+                android:id="@+id/txtMatchStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{matchItemVM.matchStatus}"
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/txtAwayTeam"
+                tools:text="Ended" />
+
+            <TextView
+                android:id="@+id/txtAwayScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@{matchItemVM.awayScore}"
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtMatchStatus"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtSeparation"
+                app:layout_constraintTop_toBottomOf="@+id/txtMatchStatus"
+                tools:text="2" />
+
+            <TextView
+                android:id="@+id/txtSeparation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/separation"
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtAwayScore"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+            <TextView
+                android:id="@+id/txtHomeScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="@{matchItemVM.homeScore}"
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtAwayScore"
+                app:layout_constraintEnd_toStartOf="@+id/txtSeparation"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/txtMatchStatus"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{matchItemVM.matchTime}"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="@{matchItemVM.matchHasStarted? View.INVISIBLE : View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtAwayTeam"
+                app:layout_constraintStart_toEndOf="@+id/txtHomeTeam"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="23:00" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.like.LikeButton
+                    android:id="@+id/btnFavourite"
+                    isFavourite="@{matchItemVM.isFavourite}"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:icon_size="24dp"
+                    app:icon_type="heart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:liked="true" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="32dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

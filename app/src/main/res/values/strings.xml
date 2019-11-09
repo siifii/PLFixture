@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Premier League Fixture</string>
+    <string name="favourites">Favourites</string>
+    <string name="separation">-</string>
+    <string name="cant_load_data">Can\'t load data.</string>
+    <string name="retry">Try Again</string>
+</resources>
