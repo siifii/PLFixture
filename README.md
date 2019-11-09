@@ -12,7 +12,7 @@ It is an *English Premier League* sample app which will let you follow its daily
 
 # screenshots
 
-# PL_Fixture_packages:
+# PL-Fixture-packages:
 1. **data**: It has all the local and remote data classes.
 2. **di**: Dependency providing and modules.
 3. **ui**: View classes with its viewModels.
@@ -34,5 +34,5 @@ I am using MVVM  pattern, MVVM enforces a clear separation between Views and the
 
 
 ## Installation
-First you should get your own [Api-key] (https://www.football-data.org/client/register)
+First you should get your own [Api-key](https://www.football-data.org/client/register)
 After that you have to create your own ```credentials.properties```  file then add you key as that  ```API_KEY=“YOUR_API_KEY” ```
