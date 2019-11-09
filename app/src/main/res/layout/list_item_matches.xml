@@ -9,11 +9,11 @@
 
         <variable
             name="matchItemVM"
-            type="com.siifii.pl_fixture.ui.fixture.MatchItemViewModel" />
+            type="com.football.pl_fixture.ui.fixture.MatchItemViewModel" />
 
         <variable
             name="matchesItem"
-            type="com.siifii.pl_fixture.data.model.MatchesItem" />
+            type="com.football.pl_fixture.data.model.MatchesItem" />
     </data>
 
     <androidx.cardview.widget.CardView

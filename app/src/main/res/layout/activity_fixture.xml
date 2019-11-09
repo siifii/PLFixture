@@ -9,7 +9,7 @@
 
         <variable
             name="fixtureVM"
-            type="com.siifii.pl_fixture.ui.fixture.FixtureViewModel" />
+            type="com.football.pl_fixture.ui.fixture.FixtureViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

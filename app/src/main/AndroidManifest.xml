@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.siifii.pl_fixture">
+    package="com.football.pl_fixture">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.siifii.pl_fixture.app.FixtureApp"
+        android:name="com.football.pl_fixture.app.FixtureApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.siifii.pl_fixture.ui.fixture.FixtureActivity">
+        <activity android:name="com.football.pl_fixture.ui.fixture.FixtureActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
