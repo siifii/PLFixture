@@ -69,8 +69,12 @@ class TestMatchesDatabase {
         )
 
         matchesDao.insert(firstMatch)
+        matchesDao.insert(secondMatch)
+        matchesDao.insert(thirdMatch)
 
         val insertedMatches = matchesDao.getAllMatches
-        assert(insertedMatches.size == 1)
+        val insertedFavouriteMatches = matchesDao.getFavouriteMatches
+        assert(insertedMatches.size == 2)
+        assert(insertedFavouriteMatches.size == 1)
     }
 }
