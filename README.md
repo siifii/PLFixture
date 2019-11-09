@@ -11,8 +11,10 @@
 It is an *English Premier League* sample app which will let you follow its daily matches, you also can add the fixture to your favorites so you can show them only.
 
 # screenshots
-<img src="https://github.com/siifii/PLFixture/blob/master/readme_screenshot/Screenshot_1573324014.png"/>
-<img src="https://github.com/siifii/PLFixture/blob/master/readme_screenshot/Screenshot_1573324018.png"/>
+<p align="center">
+  <img src="https://github.com/siifii/PLFixture/blob/master/readme_screenshot/Screenshot_1573324014.png" width="250">
+  <img src="https://github.com/siifii/PLFixture/blob/master/readme_screenshot/Screenshot_1573324018.png" width="250">
+</p>
 
 # PL-Fixture-packages:
 1. **data**: It has all the local and remote data classes.
