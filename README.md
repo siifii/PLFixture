@@ -34,7 +34,7 @@ I am using MVVM  pattern, MVVM enforces a clear separation between Views and the
 * [KOIN](https://insert-koin.io/)
 * [Anko](https://github.com/Kotlin/anko)
 * [Retrofit](https://square.github.io/retrofit/)
-* [jUnit](https://developer.android.com/training/testing/unit-testing/local-unit-tests)
+* [JUnit](https://developer.android.com/training/testing/unit-testing/local-unit-tests)
 
 
 ## Installation
