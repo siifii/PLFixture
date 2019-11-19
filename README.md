@@ -40,3 +40,7 @@ I am using MVVM  pattern, MVVM enforces a clear separation between Views and the
 ## Installation
 First you should get your own [Api-key](https://www.football-data.org/client/register)
 After that you have to create your own ```credentials.properties```  file then add you key as that  ```API_KEY=“YOUR_API_KEY” ```
+
+## Contact
+
+Kareem Alsaifi - karemalsaifi@gmail.com
